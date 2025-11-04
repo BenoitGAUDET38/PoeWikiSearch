@@ -1,0 +1,100 @@
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; }
+.container { padding:12px; width:320px; }
+/* Pin suggestion banner */
+.pin-banner {
+	background: #fffbe6;
+	color: #7a5c00;
+	border: 1px solid #ffe58f;
+	border-radius: 6px;
+	padding: 8px 12px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 13px;
+}
+.pin-icon { margin-left: 4px; }
+.dismiss-btn {
+	background: none;
+	border: none;
+	color: #7a5c00;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 10px;
+	padding: 0 4px;
+	line-height: 1;
+}
+/* Header with small app icon */
+.popup-header { display:flex; align-items:center; gap:8px; margin-bottom:8px; }
+.app-icon { width:24px; height:24px; object-fit:contain; }
+.popup-title { font-size:14px; font-weight:600; }
+label { display:block; margin-bottom:6px; font-size:13px; }
+input[type="text"] { width:100%; padding:10px; font-size:14px; box-sizing:border-box; border-radius:8px; border:1px solid #ccc; }
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #181a1b;
+		color: #e8e6e3;
+	}
+	.container {
+		background: #181a1b;
+	}
+	.popup-header, .popup-title {
+		color: #e8e6e3;
+	}
+	label {
+		color: #bdbdbd;
+	}
+	input[type="text"] {
+		background: #232627;
+		color: #e8e6e3;
+		border: 1px solid #444;
+	}
+	.pin-banner {
+		background: #232627;
+		color: #ffe58f;
+		border: 1px solid #444;
+	}
+	.dismiss-btn {
+		color: #ffe58f;
+	}
+}
+
+/* Manual theme classes: these override prefers-color-scheme when body has theme class */
+body.theme-dark {
+	background: #181a1b;
+	color: #e8e6e3;
+}
+body.theme-dark .container { background: #181a1b; }
+body.theme-dark .popup-header, body.theme-dark .popup-title { color: #e8e6e3; }
+body.theme-dark label { color: #bdbdbd; }
+body.theme-dark input[type="text"] { background: #232627; color: #e8e6e3; border: 1px solid #444; }
+body.theme-dark .pin-banner { background: #232627; color: #ffe58f; border: 1px solid #444; }
+body.theme-dark .dismiss-btn { color: #ffe58f; }
+
+body.theme-light {
+	background: #ffffff;
+	color: #111111;
+}
+body.theme-light .container { background: #ffffff; }
+body.theme-light .popup-header, body.theme-light .popup-title { color: #111111; }
+body.theme-light label { color: #444; }
+body.theme-light input[type="text"] { background: #fff; color: #111; border: 1px solid #ccc; }
+body.theme-light .pin-banner { background: #fffbe6; color: #7a5c00; border: 1px solid #ffe58f; }
+body.theme-light .dismiss-btn { color: #7a5c00; }
+
+/* Theme toggle button */
+.theme-toggle {
+	background: transparent;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 4px 6px;
+	margin-left: auto;
+}
+.theme-toggle:focus { outline: 2px solid #6ea8fe; border-radius: 4px; }
+
+/* SVG icon sizing and color for material-style icons */
+.theme-toggle svg { width: 18px; height: 18px; display: block; fill: currentColor; }
+.theme-toggle { color: inherit; }
+.theme-toggle img { width: 18px; height: 18px; display: block; }

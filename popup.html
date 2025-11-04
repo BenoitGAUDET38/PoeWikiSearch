@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Search on PoE Wiki</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div id="pin-banner" class="pin-banner" style="display: none;">
+      <span>Tip: Pin this extension for quick access! <span class="pin-icon">📌</span></span>
+      <button id="dismiss-pin-banner" class="dismiss-btn" title="Dismiss">×</button>
+    </div>
+    <header class="popup-header">
+  <img src="icons/icon128.png" class="app-icon" alt="PoE Wiki icon" />
+      <div class="popup-title">Search on PoE Wiki</div>
+  <button id="theme-toggle" class="theme-toggle" title="Toggle theme" aria-pressed="false" aria-label="Toggle theme"></button>
+    </header>
+    <form id="searchForm" autocomplete="off">
+      <label for="q">Search on PoE Wiki</label>
+      <input id="q" name="q" type="text" placeholder="Type your search" autofocus />
+    </form>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
